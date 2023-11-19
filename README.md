@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+Задача
+Необходимо разработать "легкую" версию онлайн-игры в "Города".
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+В качестве аппонента, мы предлагаем тебе написать функцию (искуственный интеллект, если можно так это назвать), которая будет брать города из заготовленного списка (список городов прилагается в репозитории). Главное не забудь учитывать правила игры – города не могут повторяться.
 
-## Available Scripts
+Для имитации живого игрока нужно написать функцию так, чтобы ответ от нее приходил с задержкой.
 
-In the project directory, you can run:
+В репозитории есть макет для Figma, в котором ты можешь найти финальный дизайн для игры. Обрати внимание на отступы, выравнивания по центру, на размерности.
 
-### `npm start`
+В первой вкладке расположен макет, во второй tailwindcss конфигурация (она соответсвует конфигурации по умолчанию).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Все размеры в макете подходят под размеры tailwind классов. Например: максимальная ширина окна - 576px, соответсвует классу max-w-xl.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Для работы над текстом в первом слайде рекомендую использовать класс .prose из tailwind плагина Typography
 
-### `npm test`
+Так же необходимо реализовать таймер обратного отсчета, по умолчанию на 2 минуты. Если игрок или функция "ИИ" не успеет дать нужный ответ, мы можем определить победителя и проигравшего.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Для более качественной работы необходимо добавить валидацию вводимых городов на существование (1), по первой букве (2) и на повторение (3). (для упрощения проверяй существование города по имеющимуся списку городов)
 
-### `npm run build`
+Стек и технические требования
+React 18 (можно с Next, можно без)
+Tailwind
+Использование typescript в проекте будет жирным плюсом
+Роутинг делать не обязательно, если тебе будет достаточно работы в одном родительском компоненте.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pixel Perfect оценивать не будем, но жирным плюсом будет, если классы из tailwind будут верно подобраны и подходить под размеры макета.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Решение должно быть выложено в публичном репозитории на github, чтобы можно было его проверить.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+В остальном требований к проекту нет, можно использовать любые вспомогательные библиотеки на твой вкус (такие как day.js для работы с датой и тд). Будет плюсом, если ты умеешь обходится без "готовых React компонентов".
